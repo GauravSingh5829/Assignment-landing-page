@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grayn watches competitor ads, builds live creative boards from one link and delivers the signal in Slack." />
+  <meta name="theme-color" content="#F7F4EC" />
+  <title>Grayn</title>
+  <script>
+    // Keep the V16 relative asset paths locally/directly, but when this HTML is
+    // reverse-proxied under grayn.ai, resolve them beneath the public LP route.
+    if (location.hostname === 'grayn.ai' || location.hostname === 'www.grayn.ai') {
+      document.write('<base href="/lp/competitor-research/">');
+    }
+  </script>
+  <link rel="canonical" href="https://grayn.ai/lp/competitor-research" />
+  <meta property="og:url" content="https://grayn.ai/lp/competitor-research" />
+  <link rel="preconnect" href="https://grayn.ai" />
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon-v9.png" />
+  <link rel="shortcut icon" href="assets/favicon-v9.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon-v9.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Grayn home">
+        <img class="brand-logo" src="assets/grayn-header-logo.png" width="107" height="32" alt="Grayn" decoding="async" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#how">How it works</a>
+        <a href="#watch">Competitor watch</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-outline btn-small desktop-only" href="https://grayn.ai/book-a-call">Talk to us</a>
+        <a class="btn btn-primary btn-small desktop-only" href="https://app.grayn.ai/signup">Start free <span aria-hidden="true">↗</span></a>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#how">How it works</a>
+      <a href="#watch">Competitor watch</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://grayn.ai/book-a-call">Talk to us</a>
+      <a class="btn btn-primary" href="https://app.grayn.ai/signup">Start free <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="container hero-content">
+        <h1 class="hero-title reveal delay-1">Know what’s working for them <span>before</span> you brief your next ad.</h1>
+        <p class="hero-copy reveal delay-2">Grayn watches competitor ad accounts, builds a dashboard from a single link, and posts the highlights where your team already talks. No Ad Library tabs, no stale spreadsheets.</p>
+        <div class="hero-actions reveal delay-3">
+          <a class="btn btn-primary btn-large" href="https://app.grayn.ai/signup">Start free in 2 minutes <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline btn-large" href="#watch">See it in Slack <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="micro-proof reveal delay-4">
+          <span>$200 in free credits</span><i></i><span>No credit card required</span>
+        </div>
+      </div>
+
+      <div class="container visual-wrap reveal delay-4">
+        <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+        <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+        <div class="thread-visual staged-demo" id="threadDemo" aria-label="Animated Slack thread showing Grayn creating a competitor watch">
+          <div class="thread-screenshot-stage">
+            <img class="thread-stage-base" src="assets/thread-question.png" width="1520" height="1216" alt="Slack thread with a user asking Grayn to set a competitor alert" loading="eager" fetchpriority="high" decoding="async" />
+            <img class="thread-stage-answer" src="assets/thread-panel.png" width="1520" height="1216" alt="Completed Slack thread showing Grayn creating the competitor watch" loading="eager" decoding="async" />
+
+            <div class="thread-typing screenshot-typing" aria-label="Grayn is responding">
+              <span class="typing-mark" aria-hidden="true">✦</span>
+              <div class="typing-copy">
+                <strong>Grayn <small>AGENT</small></strong>
+                <span class="typing-bubble"><i></i><i></i><i></i></span>
+              </div>
+            </div>
+
+            <div class="thread-ready answer-ready" aria-hidden="true"><i></i> Watch ready</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem section-pad" id="how">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="kicker">The problem</div>
+          <h2>Everyone tracks the competitors that matter. <em>Nobody has time to actually watch them.</em></h2>
+          <p>Research lives in a dozen open tabs, a screenshot someone sent in a DM, and a spreadsheet that went stale two briefs ago.</p>
+        </div>
+
+        <div class="converge-stage reveal">
+          <div class="source-grid">
+            <div class="source-chip"><span class="source-icon meta">M</span><span>Meta Ad Library</span></div>
+            <div class="source-chip"><span class="source-icon dm">↗</span><span>Screenshot in a DM</span></div>
+            <div class="source-chip"><span class="source-icon sheet">▦</span><span>Spreadsheet, three weeks old</span></div>
+            <div class="source-chip"><span class="source-icon doubt">?</span><span>“Didn’t we already check them?”</span></div>
+          </div>
+          <div class="signal-lines" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+            <span class="pulse-dot"></span>
+          </div>
+          <div class="solution-chip"><span class="solution-star">✦</span><strong>One channel.</strong> Always current.<span class="live-pill"><i></i> LIVE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="board-section section-pad" id="watch">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="kicker">How it works</div>
+          <h2>One link in, <span class="scribble">a full board out.</span></h2>
+          <p>Drop a competitor’s site or ad link in Slack. Grayn builds a live board of their creative, tags the angle and format, and keeps it updated on its own.</p>
+        </div>
+
+        <div class="board-shell reveal">
+          <div class="board-image-wrap tilt-card" data-tilt="0.3">
+            <img src="assets/competitor-research.png" width="2048" height="2021" alt="Grayn competitor research dashboard showing a full board of Meta ads" loading="lazy" decoding="async" />
+          </div>
+          <div class="board-caption" aria-label="Board summary">
+            <span><b>6</b> ads running</span>
+            <span><b>4</b> angles tagged</span>
+            <span><b>1</b> board, always current</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ask-section section-pad" id="ask">
+      <div class="container ask-grid">
+        <div class="ask-copy reveal from-left">
+          <div class="kicker">Ask it anything</div>
+          <h2>Skip the dashboard.<br /><span>Just ask.</span></h2>
+          <p>“Build a competitor board for Acme Outdoors.” “Show me their latest ads.” Grayn answers in the channel, in seconds, with the creative and a shareable board ready to go.</p>
+          <div class="prompt-row" aria-label="Example questions">
+            <button type="button" class="prompt-chip">Build a competitor board</button>
+            <button type="button" class="prompt-chip">Show me the latest ads</button>
+          </div>
+        </div>
+
+        <div class="slack-visual reveal from-right" id="slackCard" aria-label="Animated Grayn Slack competitor research example">
+          <div class="slack-screenshot-stage">
+            <img class="slack-stage-base" src="assets/grayn-slack-question-clean.png" width="2048" height="1196" alt="Grayn Slack competitor research conversation showing the user question" loading="lazy" decoding="async" />
+            <img class="slack-stage-answer" src="assets/grayn-slack-mockup.png" width="2048" height="1196" alt="Grayn Slack competitor research conversation with a completed competitor board" loading="lazy" decoding="async" />
+            <div class="slack-answer-mask" aria-hidden="true"></div>
+
+            <div class="screenshot-typing" id="typingRow" aria-label="Grayn is responding">
+              <span class="typing-mark" aria-hidden="true">✦</span>
+              <div class="typing-copy">
+                <strong>Grayn <small>AGENT</small></strong>
+                <span class="typing-bubble"><i></i><i></i><i></i></span>
+              </div>
+            </div>
+
+            <div class="answer-ready" aria-hidden="true"><i></i> Board ready</div>
+          </div>
+          <div class="demo-status" aria-hidden="true">
+            <span class="status-step active"><i>1</i> Ask</span>
+            <span class="status-line"></span>
+            <span class="status-step typing-step"><i>2</i> Grayn works</span>
+            <span class="status-line"></span>
+            <span class="status-step answer-step"><i>3</i> Board ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section-pad">
+      <div class="container">
+        <div class="section-heading reveal compact">
+          <div class="kicker">What you get</div>
+          <h2>Not just a screenshot. <em>A system that keeps working.</em></h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <span class="feature-num">01</span>
+            <h3>Daily digest</h3>
+            <p>One message every morning with what changed overnight across every competitor you’re tracking.</p>
+            <div class="card-line"></div>
+          </article>
+          <article class="feature-card reveal delay-card-1">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h8l-1 8 11-13h-8z"/></svg></div>
+            <span class="feature-num">02</span>
+            <h3>Instant new-ad alerts</h3>
+            <p>The moment a rival launches something new, your team knows, with the creative already attached.</p>
+            <div class="card-line"></div>
+          </article>
+          <article class="feature-card reveal delay-card-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2a5 5 0 0 0-7.07-7.07l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></div>
+            <span class="feature-num">03</span>
+            <h3>One-link dashboards</h3>
+            <p>Paste a link. Get a board of creative tagged by angle, hook and format, searchable by anyone on the team.</p>
+            <div class="card-line"></div>
+          </article>
+          <article class="feature-card reveal delay-card-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5z"/></svg></div>
+            <span class="feature-num">04</span>
+            <h3>Creative gap analysis</h3>
+            <p>See which angles and formats nobody in your category has tried yet, so your next brief starts somewhere new.</p>
+            <div class="card-line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-pad" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal">
+          <div class="kicker">The honest answers</div>
+          <h2>Questions people <span>actually ask.</span></h2>
+          <p>No vague AI promises. Just the practical stuff you need before putting another tool in the team’s workflow.</p>
+          <a href="https://grayn.ai/book-a-call" class="text-link">Still curious? Talk to us <span>↗</span></a>
+        </div>
+
+        <div class="faq-list reveal">
+          <article class="faq-item open">
+            <button class="faq-question" type="button" aria-expanded="true"><span>Does Grayn scrape private competitor data?</span><i></i></button>
+            <div class="faq-answer"><div><p>No. Grayn only reads what’s already public: ad libraries, landing pages and public posts. Nothing behind a login.</p></div></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>How is this different from someone dropping a screenshot in Slack?</span><i></i></button>
+            <div class="faq-answer"><div><p>A screenshot goes stale the day it’s posted. A Grayn board updates itself, and every ad is tagged so you can search by angle or format months later.</p></div></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>Do I need to connect my own ad accounts to use this?</span><i></i></button>
+            <div class="faq-answer"><div><p>No. Competitor Watch works on its own. Connecting your own accounts unlocks side-by-side comparisons, but it’s optional.</p></div></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>How long does setup take?</span><i></i></button>
+            <div class="faq-answer"><div><p>About two minutes. Add Grayn to a Slack channel, tell it who to watch, and it starts running.</p></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="cta-grid" aria-hidden="true"></div>
+      <div class="container cta-inner reveal">
+        <div class="kicker light">Start now</div>
+        <h2>Your next winning angle is already running. <span>Somewhere.</span></h2>
+        <p>Free to start, $200 in credits included. No credit card, no setup call.</p>
+        <div class="cta-actions">
+          <a class="btn btn-mint btn-large" href="https://app.grayn.ai/signup">Start free <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-mint btn-large" href="https://grayn.ai/book-a-call">or talk to us</a>
+        </div>
+      </div>
+      <div class="cta-orb" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="footer-wordmark" href="#top" aria-label="Grayn home">
+        <img src="assets/favicon.png" alt="" aria-hidden="true" />
+        <span>Grayn</span>
+      </a>
+      <p>© 2026 Grayn</p>
+      <div class="footer-links"><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="https://grayn.ai/book-a-call">Contact</a></div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
